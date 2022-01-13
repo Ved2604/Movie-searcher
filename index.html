@@ -1,0 +1,157 @@
+<style>
+    body {
+        background-size: 85%;
+        background-position: top;
+        background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")
+    }
+    .heading-text{
+        font-size: xxx-large;
+        color: bisque;
+        text-align: center;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Sniglet|Raleway:900);
+
+    .heading{
+        padding: 3vw;
+        font-family: 'Sniglet', cursive;
+    }
+    .heading-text{
+        font-size: xxx-large;
+        color: bisque;
+        text-align: center;
+        font-family: 'Sniglet', cursive;
+    }
+    body, html{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: 'Sniglet', cursive;
+    }
+    h1{
+        font-weight: normal;
+        font-size: 4em;
+        font-family: 'Raleway', sans-serif;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 500px;
+        color: #F90;
+        text-align: center;
+
+    }
+
+    /* Animation webkit */
+    @-webkit-keyframes myfirst
+    {
+        0% {margin-left: -235px}
+        90% {margin-left: 100%;}
+        100% {margin-left: 100%;}
+    }
+
+    /* Animation */
+    @keyframes myfirst
+    {
+        0% {margin-left: -235px}
+        70% {margin-left: 100%;}
+        100% {margin-left: 100%;}
+    }
+    #form{
+        height: 100%;
+        background-color: rgba(00,0,0,0);
+        overflow: hidden;
+        position: relative;
+
+    }
+    form{
+        margin: 0 auto;
+        width: 500px;
+        padding-top: 40px;
+        color: white;
+        position: relative;
+
+
+    }
+    label, input, textarea{
+        display: block;
+    }
+    input, textarea{
+        text-align: center;
+        background-color: peachpuff;
+        width: 500px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        padding: 10px;
+        padding-left: 0%;
+        font-family: 'Sniglet', cursive;
+        font-size: 1em;
+        color:saddlebrown;
+        transition: border 0.5s;
+        -webkit-transition: border 0.5s;
+        -moz-transition: border 0.5s;
+        -o-transition: border 0.5s;
+        border: solid 3px #98d4f3;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+
+    }
+    input:focus, textarea:focus{
+        border: solid 3px #77bde0;
+    }
+
+    textarea{
+        height: 100px;
+        resize: none;
+        overflow: auto;
+    }
+    input[type="submit"]{
+        text-align: center;
+        margin-left: 40%;
+        text-align: center;
+        align-content: center;
+        width: 100px;
+        background-color: inherit;
+        color: white;
+        height: 50px;
+        cursor: pointer;
+        margin-top: 30px;
+        font-size: 1.1em;
+
+        font-family: 'Sniglet', cursive;
+        -webkit-transition: background-color 0.5s;
+        -moz-transition: background-color 0.5s;
+        -o-transition: background-color 0.5s;
+        transition: background-color 0.5s;
+    }
+    input[type="submit"]:hover{
+
+        background-color:rgba(128,30,0,1);
+
+    }
+
+    label{
+        font-size: 1.5em;
+        margin-top: 20px;
+        padding-top: 0px;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+<div class="heading">
+    <h1 class = "heading-text">Search for any Movie</h1>
+</div>
+
+<div id="form">
+    <form id="waterform" method="Get" action="/results">
+        <div class="formgroup" id="name-form">
+            <label>Movie-name</label>
+            <input type="text" id="name" name="Moviename" />
+        </div>
+        <input type="submit" value="Search!" />
+    </form>
+</div>
+
+</body>

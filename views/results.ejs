@@ -1,0 +1,89 @@
+<script>
+    var movieurl = "//www.imdb.com/title/"
+</script>
+<style>
+ body{
+     background-color: greenyellow;
+ }
+    .grid-container {
+        align-content: center;
+        border: 10px solid lightsteelblue;
+        display: grid;
+        width: 80%;
+        margin-left: 10%;
+        grid-template-columns: auto auto auto;
+        margin-bottom: 10px;
+        background-color: lightsteelblue;
+    }
+
+    .grid-item {
+        padding: 20px;
+        margin-right: 0vw;
+        font-size: 1.3vw;
+        text-align: center;
+        height: 600px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    .card{
+
+
+        border-radius: 50%;
+        padding: 10%;
+    }
+    .card:hover{
+        box-shadow: 8px 8px 5px darkgray;
+        background-color: #ece6e9;
+        transform: scale(1.05);
+
+        transition: 0.5s ;
+    }
+
+ img {
+     border: 5px black rgb(0,0,0) ;
+    font-size: 30px;
+     width:100px;
+     height:300px;
+     background: url("https://media.istockphoto.com/vectors/error-404-page-not-found-vector-id673101428?k=6&m=673101428&s=170667a&w=0&h=xr8E71CR8ZabAwW7ku9RRy8xFJqp3Pq-gaMDnD6Qh1c=");
+     background-size: contain;
+ }
+ .head{
+     text-align: center;
+     padding: 20px;
+ }
+.a{
+    padding-left: 40%;
+}
+</style>
+<body style="background-color: lightsteelblue">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<%if(data.Search==undefined){%>
+
+    <h1>Sorry, the result is not available, please check the spelling once again!</h1>
+    <div class="but" style="padding-left: 20px">
+
+    </div>
+<%}else{%>
+<div class="head"><h1>Movies related to the search are:</h1>
+</div>
+<div class="grid-container">
+
+
+<% data.Search.forEach((movie) =>{%>
+
+    <div class="card grid-item" style="width: 20rem;">
+
+        <img  src= <%= movie.Poster%> class="card-img-top" alt="...">
+        <div class="card-body">
+            <p class="card-title"><strong><%= movie.Title%></strong></p>
+            <p class="card-text">Released in :<%= movie.Year%> </p>
+            <p class="card-text2">Type: <%= movie.Type%></p>
+<!--            <a href=movieurl + <%=movie.imdbID%> class="btn btn-primary">more info</a>-->
+        </div>
+    </div>
+
+<%})%>
+<%}%>
+</div>
+<a style="margin-left: 48%; margin-bottom:10%;" href="/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Search again!</a>
+</body>
